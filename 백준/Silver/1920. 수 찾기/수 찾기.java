@@ -14,7 +14,6 @@ class Main {
 
 
         int m = sc.nextInt();
-        int[] arr = new int[m];
         for (int i = 0; i < m; i++) {
             if(hashSet.contains(sc.nextInt()))
                 System.out.println(1);
