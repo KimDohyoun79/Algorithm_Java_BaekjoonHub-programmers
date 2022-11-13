@@ -15,8 +15,9 @@ class Main {
             int len = 1;
 
             while (i % num != 0) {
-                i %= num;
-                i = i * 10 + 1;
+//                i %= num;
+//                i = i * 10 + 1;
+                i = (i * 10 + 1) % num;
                 len++;
             }
             bw.write(String.valueOf(len)+"\n");
