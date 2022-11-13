@@ -8,21 +8,18 @@ class Main {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         String str = null;
-        while ((str = br.readLine()) != null){
+        while ((str = br.readLine()) != null) {
             int num = Integer.parseInt(str);
 
             long i = 1;
             int len = 1;
 
+            // 모듈러 연산
             while (i % num != 0) {
-                i %= num;
-                i = i * 10 + 1;
-
-//                i = (i * 10 + 1) % num;
-
+                i = (i * 10 + 1) % num;
                 len++;
             }
-            bw.write(String.valueOf(len)+"\n");
+            bw.write(String.valueOf(len) + "\n");
             bw.flush();
         }
         br.close();
