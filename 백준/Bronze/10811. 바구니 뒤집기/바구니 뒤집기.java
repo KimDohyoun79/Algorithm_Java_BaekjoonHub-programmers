@@ -1,6 +1,5 @@
 //https://www.acmicpc.net/problem/10811
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
@@ -16,18 +15,22 @@ public class Main {
             arr[i] = i + 1;
         }
 
-        while (M > 0) {
-            int i = sc.nextInt()-1, j = sc.nextInt()-1;
-            if (j - i > 0) {
-                for (int n = (j - i + 1) / 2; n > 0; n--) { // 숫자 갯수/2 = 앞뒤 번호 교환 횟수
-                    int tmp = arr[i];
-                    arr[i] = arr[j];
-                    arr[j] = tmp;
-                    i++;
-                    j--;
-                }
+        while (M-- > 0) {
+            int i = sc.nextInt() - 1, j = sc.nextInt() - 1;
+//            if (j - i > 0) {
+//                for (int n = (j - i + 1) / 2; n > 0; n--) { // 숫자 갯수/2 = 앞뒤 번호 교환 횟수
+//                    int tmp = arr[i];
+//                    arr[i] = arr[j];
+//                    arr[j] = tmp;
+//                    i++;
+//                    j--;
+//                }
+//            }
+            for (int f = i; f < j; f++) {
+                int tmp = arr[f];
+                arr[f] = arr[j];
+                arr[j--] = tmp;
             }
-            M--;
         }
 //        System.out.println(Arrays.toString(arr));
         for (int i = 0; i < N; i++) {
