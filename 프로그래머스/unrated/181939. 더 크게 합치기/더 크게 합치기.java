@@ -1,7 +1,5 @@
 class Solution { // 정수 자릿수 구하기, 제곱(Math.pow = 더블형)
     public int solution(int a, int b) {
-        int case1 = Integer.parseInt(String.valueOf(a) + b);
-        int case2 = Integer.parseInt(String.valueOf(b) +a);
-        return case1 > case2 ? case1 : case2;
+        return Math.max(Integer.parseInt("" + a + b), Integer.parseInt("" + b + a));
     }
 }
