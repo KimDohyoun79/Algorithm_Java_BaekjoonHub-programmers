@@ -1,18 +1,16 @@
 class Solution {
     public String solution(String my_string, String overwrite_string, int s) {
-        String answer = "";
-        
-        for(int i = 0; i < my_string.length(); i++){
-            if(i == s){
-                for(int k = 0; k < overwrite_string.length(); k++){
-                    answer += overwrite_string.charAt(k);
-                    i++;
-                }
+        StringBuilder answer = new StringBuilder();
+
+        for (int i = 0; i < my_string.length(); i++) {
+            if (i == s) {
+                answer.append(overwrite_string);
+                i += overwrite_string.length() - 1;
+            } else {
+                answer.append(my_string.charAt(i));
             }
-            if(i < my_string.length())
-            answer += my_string.charAt(i);
         }
-        
-        return answer;
+
+        return answer.toString();
     }
 }
