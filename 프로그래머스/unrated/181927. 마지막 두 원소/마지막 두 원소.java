@@ -8,7 +8,7 @@ class Solution {
             answer[i] = num_list[i];
         
         answer[len] = (num_list[len - 2] < num_list[len - 1]) ? 
-                    (num_list[len - 1] - num_list[len - 2] ) : (num_list[len - 1] *2 );
+                    (num_list[len - 1] - num_list[len - 2] ) : (num_list[len - 1] * 2 );
         
         return answer;
     }
