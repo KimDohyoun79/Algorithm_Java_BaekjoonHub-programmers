@@ -12,7 +12,6 @@ class Solution {
             else
                 answer[i] = my_str.substring(i * n, strLen);
         }
-       
         return answer;
     }
 }
