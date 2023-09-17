@@ -1,7 +1,7 @@
 class Solution {
     public String solution(String s) {
         
-        String answer = "";
+        StringBuilder str = new StringBuilder();
         int[] alphaCount = new int[26];
         
         for(char c : s.toCharArray())
@@ -9,9 +9,9 @@ class Solution {
         
         for(int i = 0;  i < 26; i++){
             if(alphaCount[i] == 1)
-                answer += (char)(i + 'a');
+                str.append((char)(i + 'a'));
         } 
         
-        return answer;
+        return str.toString();
     }
 }
