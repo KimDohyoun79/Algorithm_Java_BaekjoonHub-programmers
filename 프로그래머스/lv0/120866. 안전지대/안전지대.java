@@ -28,7 +28,6 @@ class Solution {
             System.out.println();
         }
         
-        
         return answer;
     }
 }
