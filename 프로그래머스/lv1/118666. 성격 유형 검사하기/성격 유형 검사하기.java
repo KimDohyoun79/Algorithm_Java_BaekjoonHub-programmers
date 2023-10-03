@@ -15,19 +15,14 @@ class Solution {
         
         for(int i = 0; i < choices.length; i++){
         
-            if(choices[i] < 4){
-                int choice = choices[i] == 1 ? 3 : (choices[i] == 2 ? 2 : 1);
-                map.put(survey[i].charAt(0), map.get(survey[i].charAt(0)) + choice);
-            }
-            else if(choices[i] > 4){
+            if(choices[i] < 4)
+                map.put(survey[i].charAt(0), map.get(survey[i].charAt(0)) + 4 - choices[i]);
+            else if(choices[i] > 4)
                 map.put(survey[i].charAt(1), map.get(survey[i].charAt(1)) + choices[i] - 4);
-            }
-            
         }
         System.out.println(map);
         
         StringBuilder sb = new StringBuilder();
-        
 
         for(int i = 0; i < 8; i+=2){
             int x = map.get(cArr[i]);
